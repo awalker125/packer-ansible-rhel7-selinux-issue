@@ -1,0 +1,390 @@
+[packer-ansible-rhel7-selinux-issue] $ /bin/sh -xe /tmp/hudson7405600183805422075.sh
++ export PACKER_LOG=1
++ PACKER_LOG=1
++ /usr/local/bin/packer build -var build_number=5 -var 'built_by=Andrew Walker' -on-error=abort -debug /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/packer.json
+2017/04/28 07:02:29 [INFO] Packer version: 1.1.0-dev (23d2917b9850a4eb1f2edf742b68e82f7023f3b6)
+2017/04/28 07:02:29 Packer Target OS/Arch: linux amd64
+2017/04/28 07:02:29 Built with Go Version: go1.8.1
+2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 Using internal plugin for azure-arm
+2017/04/28 07:02:29 Using internal plugin for hyperv-iso
+2017/04/28 07:02:29 Using internal plugin for openstack
+2017/04/28 07:02:29 Using internal plugin for amazon-ebsvolume
+2017/04/28 07:02:29 Using internal plugin for file
+2017/04/28 07:02:29 Using internal plugin for null
+2017/04/28 07:02:29 Using internal plugin for oneandone
+2017/04/28 07:02:29 Using internal plugin for parallels-iso
+2017/04/28 07:02:29 Using internal plugin for profitbricks
+2017/04/28 07:02:29 Using internal plugin for qemu
+2017/04/28 07:02:29 Using internal plugin for virtualbox-ovf
+2017/04/28 07:02:29 Using internal plugin for cloudstack
+2017/04/28 07:02:29 Using internal plugin for vmware-iso
+2017/04/28 07:02:29 Using internal plugin for amazon-ebs
+2017/04/28 07:02:29 Using internal plugin for amazon-ebssurrogate
+2017/04/28 07:02:29 Using internal plugin for googlecompute
+2017/04/28 07:02:29 Using internal plugin for parallels-pvm
+2017/04/28 07:02:29 Using internal plugin for triton
+2017/04/28 07:02:29 Using internal plugin for virtualbox-iso
+2017/04/28 07:02:29 Using internal plugin for amazon-chroot
+2017/04/28 07:02:29 Using internal plugin for digitalocean
+2017/04/28 07:02:29 Using internal plugin for docker
+2017/04/28 07:02:29 Using internal plugin for vmware-vmx
+2017/04/28 07:02:29 Using internal plugin for amazon-instance
+2017/04/28 07:02:29 Using internal plugin for shell
+2017/04/28 07:02:29 Using internal plugin for windows-restart
+2017/04/28 07:02:29 Using internal plugin for ansible
+2017/04/28 07:02:29 Using internal plugin for file
+2017/04/28 07:02:29 Using internal plugin for powershell
+2017/04/28 07:02:29 Using internal plugin for windows-shell
+2017/04/28 07:02:29 Using internal plugin for chef-client
+2017/04/28 07:02:29 Using internal plugin for chef-solo
+2017/04/28 07:02:29 Using internal plugin for puppet-server
+2017/04/28 07:02:29 Using internal plugin for salt-masterless
+2017/04/28 07:02:29 Using internal plugin for shell-local
+2017/04/28 07:02:29 Using internal plugin for ansible-local
+2017/04/28 07:02:29 Using internal plugin for converge
+2017/04/28 07:02:29 Using internal plugin for puppet-masterless
+2017/04/28 07:02:29 Using internal plugin for checksum
+2017/04/28 07:02:29 Using internal plugin for vsphere
+2017/04/28 07:02:29 Using internal plugin for vagrant
+2017/04/28 07:02:29 Using internal plugin for amazon-import
+2017/04/28 07:02:29 Using internal plugin for docker-import
+2017/04/28 07:02:29 Using internal plugin for docker-push
+2017/04/28 07:02:29 Using internal plugin for docker-save
+2017/04/28 07:02:29 Using internal plugin for manifest
+2017/04/28 07:02:29 Using internal plugin for shell-local
+2017/04/28 07:02:29 Using internal plugin for compress
+2017/04/28 07:02:29 Using internal plugin for artifice
+2017/04/28 07:02:29 Using internal plugin for atlas
+2017/04/28 07:02:29 Using internal plugin for docker-tag
+2017/04/28 07:02:29 Using internal plugin for googlecompute-export
+2017/04/28 07:02:29 Using internal plugin for vagrant-cloud
+2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 Attempting to open config file: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 [WARN] Config file doesn't exist: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[docker:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-docker openstack:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-openstack file:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-file cloudstack:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-cloudstack amazon-ebs:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs parallels-pvm:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-pvm vmware-vmx:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-vmx azure-arm:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-arm hyperv-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-iso qemu:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-qemu amazon-ebssurrogate:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebssurrogate vmware-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-iso amazon-instance:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-instance amazon-ebsvolume:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebsvolume oneandone:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oneandone profitbricks:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-profitbricks virtualbox-ovf:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-ovf virtualbox-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-iso amazon-chroot:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-chroot digitalocean:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-digitalocean null:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-null parallels-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-iso googlecompute:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-googlecompute triton:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-triton] PostProcessors:map[docker-save:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-save artifice:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-artifice checksum:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-checksum docker-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-import docker-push:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-push vsphere:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere shell-local:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-shell-local googlecompute-export:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-export vagrant-cloud:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant-cloud amazon-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-amazon-import manifest:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-manifest compress:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-compress vagrant:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant atlas:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-atlas docker-tag:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-tag] Provisioners:map[ansible:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible file:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-file windows-shell:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-shell shell-local:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell-local chef-solo:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-solo puppet-server:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-server converge:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-converge puppet-masterless:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-masterless windows-restart:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-restart powershell:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-powershell chef-client:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-client ansible-local:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible-local shell:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell salt-masterless:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-salt-masterless]}
+2017/04/28 07:02:29 Setting cache directory: /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/packer_cache
+2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 Loading builder: docker
+2017/04/28 07:02:29 Plugin could not be found. Checking same directory as executable.
+2017/04/28 07:02:29 Current exe path: /usr/local/bin/packer
+2017/04/28 07:02:29 Creating plugin client for path: /usr/local/bin/packer
+2017/04/28 07:02:29 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-builder-docker"}
+2017/04/28 07:02:29 Waiting for RPC address for: /usr/local/bin/packer
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [INFO] Packer version: 1.1.0-dev (23d2917b9850a4eb1f2edf742b68e82f7023f3b6)
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Packer Target OS/Arch: linux amd64
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Built with Go Version: go1.8.1
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Attempting to open config file: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [WARN] Config file doesn't exist: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Setting cache directory: /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/packer_cache
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 args: []string{"packer-builder-docker"}
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin minimum port: 10000
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin maximum port: 25000
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin address: unix /tmp/packer-plugin048006783
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Waiting for connection...
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Serving a plugin connection...
+2017/04/28 07:02:29 Loading provisioner: ansible
+2017/04/28 07:02:29 Plugin could not be found. Checking same directory as executable.
+2017/04/28 07:02:29 Current exe path: /usr/local/bin/packer
+2017/04/28 07:02:29 Creating plugin client for path: /usr/local/bin/packer
+2017/04/28 07:02:29 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-provisioner-ansible"}
+2017/04/28 07:02:29 Waiting for RPC address for: /usr/local/bin/packer
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [INFO] Packer version: 1.1.0-dev (23d2917b9850a4eb1f2edf742b68e82f7023f3b6)
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Packer Target OS/Arch: linux amd64
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Built with Go Version: go1.8.1
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Attempting to open config file: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [WARN] Config file doesn't exist: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Setting cache directory: /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/packer_cache
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 args: []string{"packer-provisioner-ansible"}
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin minimum port: 10000
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin maximum port: 25000
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin address: unix /tmp/packer-plugin329246387
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Waiting for connection...
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Serving a plugin connection...
+2017/04/28 07:02:29 Loading post-processor: docker-tag
+2017/04/28 07:02:29 Plugin could not be found. Checking same directory as executable.
+2017/04/28 07:02:29 Current exe path: /usr/local/bin/packer
+2017/04/28 07:02:29 Creating plugin client for path: /usr/local/bin/packer
+2017/04/28 07:02:29 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-post-processor-docker-tag"}
+2017/04/28 07:02:29 Waiting for RPC address for: /usr/local/bin/packer
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [INFO] Packer version: 1.1.0-dev (23d2917b9850a4eb1f2edf742b68e82f7023f3b6)
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Packer Target OS/Arch: linux amd64
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Built with Go Version: go1.8.1
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Attempting to open config file: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [WARN] Config file doesn't exist: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Setting cache directory: /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/packer_cache
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 args: []string{"packer-post-processor-docker-tag"}
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin minimum port: 10000
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin maximum port: 25000
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin address: unix /tmp/packer-plugin260993075
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Waiting for connection...
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Serving a plugin connection...
+2017/04/28 07:02:29 Loading post-processor: docker-tag
+2017/04/28 07:02:29 Plugin could not be found. Checking same directory as executable.
+2017/04/28 07:02:29 Current exe path: /usr/local/bin/packer
+2017/04/28 07:02:29 Creating plugin client for path: /usr/local/bin/packer
+2017/04/28 07:02:29 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-post-processor-docker-tag"}
+2017/04/28 07:02:29 Waiting for RPC address for: /usr/local/bin/packer
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [INFO] Packer version: 1.1.0-dev (23d2917b9850a4eb1f2edf742b68e82f7023f3b6)
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Packer Target OS/Arch: linux amd64
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Built with Go Version: go1.8.1
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Attempting to open config file: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [WARN] Config file doesn't exist: /home/jenkins/.packerconfig
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Setting cache directory: /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/packer_cache
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 args: []string{"packer-post-processor-docker-tag"}
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin minimum port: 10000
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin maximum port: 25000
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Plugin address: unix /tmp/packer-plugin866427248
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Waiting for connection...
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Serving a plugin connection...
+2017/04/28 07:02:29 ui: Debug mode enabled. Builds will not be parallelized.
+2017/04/28 07:02:29 ui: docker output will be in this color.
+2017/04/28 07:02:29 ui: 
+2017/04/28 07:02:29 Build debug mode: true
+2017/04/28 07:02:29 Force build: false
+2017/04/28 07:02:29 On error: abort
+2017/04/28 07:02:29 Preparing build: docker
+Debug mode enabled. Builds will not be parallelized.
+docker output will be in this color.
+
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 ansible-playbook version: 2.2.2.0
+2017/04/28 07:02:29 Debug enabled, so waiting for build to finish: docker
+2017/04/28 07:02:29 Starting build run: docker
+2017/04/28 07:02:29 Running builder: docker
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [DEBUG] Docker version: 1.10.3
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 [DEBUG] Container will be committed
+2017/04/28 07:02:29 ui: ==> docker: Creating a temporary directory for sharing data...
+==> docker: Creating a temporary directory for sharing data...
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Detected home directory from env var: /home/jenkins
+2017/04/28 07:02:29 ui: ask: ==> docker: Pausing after run of step 'StepTempDir'. Press enter to continue.
+2017/04/28 07:02:29 ui: ==> docker: Pulling Docker image: centos:7
+==> docker: Pausing after run of step 'StepTempDir'. Press enter to continue. ==> docker: Pulling Docker image: centos:7
+2017/04/28 07:02:29 packer: 2017/04/28 07:02:29 Executing: /usr/bin/docker [pull centos:7]
+2017/04/28 07:02:30 ui:     docker: Trying to pull repository registry.access.redhat.com/centos ...
+    docker: Trying to pull repository registry.access.redhat.com/centos ...
+2017/04/28 07:02:31 ui:     docker: unknown: Not Found
+    docker: unknown: Not Found
+    docker: Trying to pull repository docker.io/library/centos ...
+2017/04/28 07:02:41 ui:     docker: 7: Pulling from docker.io/library/centos
+    docker: 7: Pulling from docker.io/library/centos
+2017/04/28 07:02:41 ui:     docker: Digest: sha256:4eda692c08e0a065ae91d74e82fff4af3da307b4341ad61fa61771cc4659af60
+    docker: Digest: sha256:4eda692c08e0a065ae91d74e82fff4af3da307b4341ad61fa61771cc4659af60
+2017/04/28 07:02:41 ui:     docker: Status: Image is up to date for docker.io/centos:7
+    docker: Status: Image is up to date for docker.io/centos:7
+2017/04/28 07:02:41 ui: ask: ==> docker: Pausing after run of step 'StepPull'. Press enter to continue.
+2017/04/28 07:02:41 ui: ==> docker: Starting docker container...
+==> docker: Pausing after run of step 'StepPull'. Press enter to continue. ==> docker: Starting docker container...
+2017/04/28 07:02:41 ui:     docker: Run command: docker run -v /home/jenkins/.packer.d/tmp/packer-docker472335826:/packer-files:Z -d -i -t centos:7 /bin/bash
+    docker: Run command: docker run -v /home/jenkins/.packer.d/tmp/packer-docker472335826:/packer-files:Z -d -i -t centos:7 /bin/bash
+2017/04/28 07:02:41 packer: 2017/04/28 07:02:41 Starting container with args: [run -v /home/jenkins/.packer.d/tmp/packer-docker472335826:/packer-files:Z -d -i -t centos:7 /bin/bash]
+2017/04/28 07:02:41 packer: 2017/04/28 07:02:41 Waiting for container to finish starting
+2017/04/28 07:02:47 ui:     docker: Container ID: 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b
+    docker: Container ID: 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b
+2017/04/28 07:02:47 ui: ask: ==> docker: Pausing after run of step 'StepRun'. Press enter to continue.
+==> docker: Pausing after run of step 'StepRun'. Press enter to continue. 2017/04/28 07:02:47 ui: ask: ==> docker: Pausing after run of step 'StepConnect'. Press enter to continue.
+2017/04/28 07:02:47 packer: 2017/04/28 07:02:47 Running the provision hook
+==> docker: Pausing after run of step 'StepConnect'. Press enter to continue. ==> docker: Provisioning with Ansible...
+2017/04/28 07:02:47 ui: ==> docker: Provisioning with Ansible...
+2017/04/28 07:02:48 packer: 2017/04/28 07:02:48 SSH proxy: serving on 127.0.0.1:36256
+2017/04/28 07:02:49 ui: ==> docker: Executing Ansible: ansible-playbook --extra-vars packer_build_name=docker packer_builder_type=docker -i /tmp/packer-provisioner-ansible055902045 /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/ansible/site.yml --private-key /tmp/ansible-key029255798 -vvvv
+==> docker: Executing Ansible: ansible-playbook --extra-vars packer_build_name=docker packer_builder_type=docker -i /tmp/packer-provisioner-ansible055902045 /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/ansible/site.yml --private-key /tmp/ansible-key029255798 -vvvv
+2017/04/28 07:02:49 ui:     docker: No config file found; using defaults
+    docker: No config file found; using defaults
+2017/04/28 07:02:49 ui:     docker: Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/site-packages/ansible/plugins/callback/__init__.pyc
+    docker: Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/site-packages/ansible/plugins/callback/__init__.pyc
+2017/04/28 07:02:49 ui:     docker:
+    docker:
+2017/04/28 07:02:49 ui:     docker: PLAYBOOK: site.yml *************************************************************
+    docker: PLAYBOOK: site.yml *************************************************************
+2017/04/28 07:02:49 ui:     docker: 1 plays in /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/ansible/site.yml
+    docker: 1 plays in /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/ansible/site.yml
+2017/04/28 07:02:49 ui:     docker:
+    docker:
+2017/04/28 07:02:49 ui:     docker: PLAY [default] *****************************************************************
+    docker: PLAY [default] *****************************************************************
+2017/04/28 07:02:49 ui:     docker:
+    docker:
+2017/04/28 07:02:49 ui:     docker: TASK [setup] *******************************************************************
+    docker: TASK [setup] *******************************************************************
+2017/04/28 07:02:50 ui:     docker: Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+    docker: Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017/04/28 07:02:50 ui:     docker: <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: jenkins
+    docker: <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: jenkins
+2017/04/28 07:02:50 ui:     docker: <127.0.0.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r 127.0.0.1 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+    docker: <127.0.0.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r 127.0.0.1 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+2017/04/28 07:02:50 packer: 2017/04/28 07:02:50 SSH proxy: accepted connection
+2017/04/28 07:02:50 packer: 2017/04/28 07:02:50 authentication attempt from 127.0.0.1:59126 to 127.0.0.1:36256 as jenkins using none
+2017/04/28 07:02:50 packer: 2017/04/28 07:02:50 authentication attempt from 127.0.0.1:59126 to 127.0.0.1:36256 as jenkins using publickey
+2017/04/28 07:02:50 packer: 2017/04/28 07:02:50 new env request: LANG=en_US.UTF-8
+2017/04/28 07:02:50 packer: 2017/04/28 07:02:50 new exec request: /bin/sh -c 'echo ~ && sleep 0'
+2017/04/28 07:02:50 packer: 2017/04/28 07:02:50 Executing docker exec -i 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b /bin/sh -c (/bin/sh -c 'echo ~ && sleep 0'):
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] RPC endpoint: Communicator ended with: 0
+2017/04/28 07:02:51 [INFO] RPC client: Communicator ended with: 0
+2017/04/28 07:02:51 [INFO] 6 bytes written for 'stdout'
+2017/04/28 07:02:51 [INFO] 0 bytes written for 'stderr'
+2017/04/28 07:02:51 [INFO] RPC endpoint: Communicator ended with: 0
+2017/04/28 07:02:51 [INFO] 0 bytes written for 'stdin'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] 6 bytes written for 'stdout'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] 0 bytes written for 'stderr'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] RPC client: Communicator ended with: 0
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] 0 bytes written for 'stdin'
+2017/04/28 07:02:51 ui:     docker: <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: jenkins
+    docker: <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: jenkins
+2017/04/28 07:02:51 ui:     docker: <127.0.0.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694 `" && echo ansible-tmp-1493362970.7-128857565761694="` echo /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694 `" ) && sleep 0'"'"''
+    docker: <127.0.0.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694 `" && echo ansible-tmp-1493362970.7-128857565761694="` echo /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694 `" ) && sleep 0'"'"''
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 new env request: LANG=en_US.UTF-8
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 new exec request: /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694 `" && echo ansible-tmp-1493362970.7-128857565761694="` echo /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694 `" ) && sleep 0'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 Executing docker exec -i 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b /bin/sh -c (/bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694 `" && echo ansible-tmp-1493362970.7-128857565761694="` echo /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694 `" ) && sleep 0'):
+2017/04/28 07:02:51 [INFO] 101 bytes written for 'stdout'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] RPC endpoint: Communicator ended with: 0
+2017/04/28 07:02:51 [INFO] 0 bytes written for 'stderr'
+2017/04/28 07:02:51 [INFO] RPC client: Communicator ended with: 0
+2017/04/28 07:02:51 [INFO] RPC endpoint: Communicator ended with: 0
+2017/04/28 07:02:51 [INFO] 0 bytes written for 'stdin'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] 101 bytes written for 'stdout'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] 0 bytes written for 'stderr'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] RPC client: Communicator ended with: 0
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] 0 bytes written for 'stdin'
+2017/04/28 07:02:51 ui:     docker: <127.0.0.1> PUT /tmp/tmpy868Od TO /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py
+    docker: <127.0.0.1> PUT /tmp/tmpy868Od TO /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py
+2017/04/28 07:02:51 ui:     docker: <127.0.0.1> SSH: EXEC scp -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r /tmp/tmpy868Od '[127.0.0.1]:/root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py'
+    docker: <127.0.0.1> SSH: EXEC scp -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r /tmp/tmpy868Od '[127.0.0.1]:/root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 new env request: LANG=en_US.UTF-8
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 new exec request: scp -v -t /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 [INFO] 95415 bytes written for 'uploadData'
+2017/04/28 07:02:51 [INFO] 95415 bytes written for 'uploadData'
+2017/04/28 07:02:51 packer: 2017/04/28 07:02:51 Executing docker exec -i 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b /bin/sh -c (command cp /packer-files/upload774842121 /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py):
+2017/04/28 07:02:52 ui:     docker: <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: jenkins
+    docker: <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: jenkins
+2017/04/28 07:02:52 ui:     docker: <127.0.0.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/ /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py && sleep 0'"'"''
+    docker: <127.0.0.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/ /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py && sleep 0'"'"''
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 new env request: LANG=en_US.UTF-8
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 new exec request: /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/ /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py && sleep 0'
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 Executing docker exec -i 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b /bin/sh -c (/bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/ /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py && sleep 0'):
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 [INFO] RPC endpoint: Communicator ended with: 0
+2017/04/28 07:02:52 [INFO] 0 bytes written for 'stdout'
+2017/04/28 07:02:52 [INFO] 0 bytes written for 'stderr'
+2017/04/28 07:02:52 [INFO] RPC client: Communicator ended with: 0
+2017/04/28 07:02:52 [INFO] RPC endpoint: Communicator ended with: 0
+2017/04/28 07:02:52 [INFO] 0 bytes written for 'stdin'
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 [INFO] 0 bytes written for 'stdout'
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 [INFO] 0 bytes written for 'stderr'
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 [INFO] RPC client: Communicator ended with: 0
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 [INFO] 0 bytes written for 'stdin'
+    docker: <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: jenkins
+2017/04/28 07:02:52 ui:     docker: <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: jenkins
+    docker: <127.0.0.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r -tt 127.0.0.1 '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py; rm -rf "/root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/" > /dev/null 2>&1 && sleep 0'"'"''
+2017/04/28 07:02:52 ui:     docker: <127.0.0.1> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=36256 -o 'IdentityFile="/tmp/ansible-key029255798"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=jenkins -o ConnectTimeout=10 -o ControlPath=/home/jenkins/.ansible/cp/ansible-ssh-%h-%p-%r -tt 127.0.0.1 '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py; rm -rf "/root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/" > /dev/null 2>&1 && sleep 0'"'"''
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 ansible provisioner pty-req request
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 new env request: LANG=en_US.UTF-8
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 new exec request: /bin/sh -c '/usr/bin/python /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py; rm -rf "/root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/" > /dev/null 2>&1 && sleep 0'
+2017/04/28 07:02:52 packer: 2017/04/28 07:02:52 Executing docker exec -i 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b /bin/sh -c (/bin/sh -c '/usr/bin/python /root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/setup.py; rm -rf "/root/.ansible/tmp/ansible-tmp-1493362970.7-128857565761694/" > /dev/null 2>&1 && sleep 0'):
+2017/04/28 07:02:59 packer: 2017/04/28 07:02:59 [INFO] RPC endpoint: Communicator ended with: 0
+2017/04/28 07:02:59 [INFO] 0 bytes written for 'stderr'
+2017/04/28 07:02:59 [INFO] 7411 bytes written for 'stdout'
+2017/04/28 07:02:59 [INFO] RPC client: Communicator ended with: 0
+2017/04/28 07:02:59 [INFO] RPC endpoint: Communicator ended with: 0
+2017/04/28 07:02:59 [INFO] 0 bytes written for 'stdin'
+2017/04/28 07:02:59 packer: 2017/04/28 07:02:59 [INFO] 7411 bytes written for 'stdout'
+2017/04/28 07:02:59 packer: 2017/04/28 07:02:59 [INFO] 0 bytes written for 'stderr'
+2017/04/28 07:02:59 packer: 2017/04/28 07:02:59 [INFO] RPC client: Communicator ended with: 0
+2017/04/28 07:02:59 packer: 2017/04/28 07:02:59 [INFO] 0 bytes written for 'stdin'
+    docker: ok: [default]
+2017/04/28 07:02:59 ui:     docker: ok: [default]
+    docker:
+2017/04/28 07:02:59 ui:     docker:
+2017/04/28 07:02:59 ui:     docker: TASK [hello world] *************************************************************
+    docker: TASK [hello world] *************************************************************
+2017/04/28 07:02:59 ui:     docker: task path: /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/ansible/site.yml:5
+    docker: task path: /var/jenkins/workspace/packer-ansible-rhel7-selinux-issue/ansible/site.yml:5
+2017/04/28 07:02:59 ui:     docker: ok: [default] => {
+    docker: ok: [default] => {
+2017/04/28 07:02:59 ui:     docker:     "msg": "Hello World"
+    docker:     "msg": "Hello World"
+2017/04/28 07:02:59 ui:     docker: }
+    docker: }
+2017/04/28 07:02:59 ui:     docker:
+    docker:
+2017/04/28 07:02:59 ui:     docker: PLAY RECAP *********************************************************************
+    docker: PLAY RECAP *********************************************************************
+2017/04/28 07:02:59 ui:     docker: default                    : ok=2    changed=0    unreachable=0    failed=0
+    docker: default                    : ok=2    changed=0    unreachable=0    failed=0
+2017/04/28 07:02:59 ui:     docker:
+    docker:
+2017/04/28 07:02:59 packer: 2017/04/28 07:02:59 shutting down the SSH proxy
+2017/04/28 07:02:59 ui: ask: ==> docker: Pausing after run of step 'StepProvision'. Press enter to continue.
+2017/04/28 07:02:59 ui: ==> docker: Committing the container
+==> docker: Pausing after run of step 'StepProvision'. Press enter to continue. ==> docker: Committing the container
+2017/04/28 07:02:59 packer: 2017/04/28 07:02:59 Committing container with args: [commit --change LABEL maintainer "Andrew Walker" --change ENV container docker 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b]
+2017/04/28 07:03:10 ui:     docker: Image ID: sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e
+    docker: Image ID: sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e
+2017/04/28 07:03:10 ui: ask: ==> docker: Pausing after run of step 'StepCommit'. Press enter to continue.
+2017/04/28 07:03:10 ui: ask: ==> docker: Pausing before cleanup of step 'StepCommit'. Press enter to continue.
+2017/04/28 07:03:10 ui: ask: ==> docker: Pausing before cleanup of step 'StepProvision'. Press enter to continue.
+==> docker: Pausing after run of step 'StepCommit'. Press enter to continue. ==> docker: Pausing before cleanup of step 'StepCommit'. Press enter to continue. ==> docker: Pausing before cleanup of step 'StepProvision'. Press enter to continue. ==> docker: Pausing before cleanup of step 'StepConnect'. Press enter to continue. ==> docker: Pausing before cleanup of step 'StepRun'. Press enter to continue. ==> docker: Killing the container: 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b
+2017/04/28 07:03:10 ui: ask: ==> docker: Pausing before cleanup of step 'StepConnect'. Press enter to continue.
+2017/04/28 07:03:10 ui: ask: ==> docker: Pausing before cleanup of step 'StepRun'. Press enter to continue.
+2017/04/28 07:03:10 ui: ==> docker: Killing the container: 54db65c9806338626d95e56f88385f636c484f5b10068c12a4c59611555b643b
+2017/04/28 07:03:12 ui: ask: ==> docker: Pausing before cleanup of step 'StepPull'. Press enter to continue.
+2017/04/28 07:03:12 ui: ask: ==> docker: Pausing before cleanup of step 'StepTempDir'. Press enter to continue.
+2017/04/28 07:03:12 ui: ==> docker: Running post-processor: docker-tag
+==> docker: Pausing before cleanup of step 'StepPull'. Press enter to continue. ==> docker: Pausing before cleanup of step 'StepTempDir'. Press enter to continue. ==> docker: Running post-processor: docker-tag
+2017/04/28 07:03:12 ui:     docker (docker-tag): Tagging image: sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e
+2017/04/28 07:03:12 ui:     docker (docker-tag): Repository: aw125/centos-selinux-issue:5
+    docker (docker-tag): Tagging image: sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e
+    docker (docker-tag): Repository: aw125/centos-selinux-issue:5
+2017/04/28 07:03:12 Flagging to keep original artifact from post-processor 'docker-tag'
+2017/04/28 07:03:12 ui: ==> docker: Running post-processor: docker-tag
+==> docker: Running post-processor: docker-tag
+2017/04/28 07:03:12 ui:     docker (docker-tag): Tagging image: sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e
+2017/04/28 07:03:12 ui:     docker (docker-tag): Repository: aw125/centos-selinux-issue:latest
+    docker (docker-tag): Tagging image: sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e
+    docker (docker-tag): Repository: aw125/centos-selinux-issue:latest
+2017/04/28 07:03:12 ui: Build 'docker' finished.
+2017/04/28 07:03:12 Waiting on builds to complete...
+2017/04/28 07:03:12 Builds completed. Waiting on interrupt barrier...
+2017/04/28 07:03:12 ui: 
+==> Builds finished. The artifacts of successful builds are:
+2017/04/28 07:03:12 machine readable: docker,artifact-count []string{"3"}
+Build 'docker' finished.
+
+==> Builds finished. The artifacts of successful builds are:
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"0", "builder-id", "packer.post-processor.docker-import"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"0", "id", "sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"0", "string", "Imported Docker image: sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"0", "files-count", "0"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"0", "end"}
+2017/04/28 07:03:12 ui: --> docker: Imported Docker image: sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e
+--> docker: Imported Docker image: sha256:1cf1298724be837a56a0fec8ac718d199c78126360313f6ef713fd2696b7a54e
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"1", "builder-id", "packer.post-processor.docker-tag"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"1", "id", "aw125/centos-selinux-issue:5"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"1", "string", "Imported Docker image: aw125/centos-selinux-issue:5"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"1", "files-count", "0"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"1", "end"}
+2017/04/28 07:03:12 ui: --> docker: Imported Docker image: aw125/centos-selinux-issue:5
+--> docker: Imported Docker image: aw125/centos-selinux-issue:5
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"2", "builder-id", "packer.post-processor.docker-tag"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"2", "id", "aw125/centos-selinux-issue:latest"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"2", "string", "Imported Docker image: aw125/centos-selinux-issue:latest"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"2", "files-count", "0"}
+2017/04/28 07:03:12 machine readable: docker,artifact []string{"2", "end"}
+2017/04/28 07:03:12 ui: --> docker: Imported Docker image: aw125/centos-selinux-issue:latest
+2017/04/28 07:03:12 waiting for all plugin processes to complete...
+--> docker: Imported Docker image: aw125/centos-selinux-issue:latest
+2017/04/28 07:03:12 /usr/local/bin/packer: plugin process exited
+2017/04/28 07:03:12 /usr/local/bin/packer: plugin process exited
+2017/04/28 07:03:12 /usr/local/bin/packer: plugin process exited
+2017/04/28 07:03:12 /usr/local/bin/packer: plugin process exited
+Finished: SUCCESS
