@@ -16,10 +16,7 @@
 			"pull": "{{user `base_image_pull`}}",
 			"changes": [
 				"LABEL maintainer \"{{user `built_by`}}\"",  "ENV container docker"
-			],
-			"volumes": {
-				"/image_build/{{user `repo_name`}}-{{user `image_name`}}_{{user `ansible_version`}}/build": "/build"
-			}
+			]
 		}
 	],
 	"provisioners": [
