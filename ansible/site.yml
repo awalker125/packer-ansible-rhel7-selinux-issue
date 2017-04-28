@@ -1,0 +1,8 @@
+
+- hosts: default
+  user: root
+  tasks:
+    - name: hello world
+      debug: 
+        msg: "Hello World"
+        verbosity: 0
