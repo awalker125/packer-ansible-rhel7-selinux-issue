@@ -6,12 +6,12 @@
 		"base_image_name": "centos",
 		"base_image_version": "7",
 		"built_by": "aw125",
-		"base_image_pull": "false"
+		"base_image_pull": "true"
 	},
 	"builders": [
 		{
 			"type": "docker",
-			"image": "{{user `repo_name`}}/{{user `base_image_name`}}:{{user `base_image_version`}}",
+			"image": "{{user `base_image_name`}}:{{user `base_image_version`}}",
 			"commit": true,
 			"pull": "{{user `base_image_pull`}}",
 			"changes": [
